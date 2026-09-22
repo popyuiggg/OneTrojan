@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OneTrojan</string>
+    <string name="switch_label">代理开关</string>
+    <string name="tile_label">Trojan VPN</string>
+    <string name="config_imported">Trojan 配置已安全保存</string>
+    <string name="config_missing">请先打开配置页面并保存 Trojan 节点</string>
+    <string name="config_invalid">配置无效：%1$s</string>
+    <string name="config_open">配置</string>
+    <string name="config_title">Trojan 配置</string>
+    <string name="config_local_only">支持手动配置和粘贴 JSON 文本；不会访问 JSON 中的订阅地址。</string>
+    <string name="config_host">服务器域名</string>
+    <string name="config_server_ip">服务器 IPv4（防止启动阶段 DNS 泄漏）</string>
+    <string name="config_resolve_ipv4">解析域名的 IPv4</string>
+    <string name="config_resolving">正在通过指定 DNS 查询真实 IPv4…</string>
+    <string name="config_resolved">已解析：%1$s</string>
+    <string name="config_resolve_failed">解析失败：%1$s</string>
+    <string name="config_port">端口</string>
+    <string name="config_default_port" translatable="false">443</string>
+    <string name="config_sni">TLS SNI / peer</string>
+    <string name="config_password">密码</string>
+    <string name="config_dns">代理内 DNS IPv4</string>
+    <string name="config_alpn">ALPN（逗号分隔）</string>
+    <string name="config_default_alpn" translatable="false">h2,http/1.1</string>
+    <string name="config_tls_profile">TLS 指纹（chrome 或 default）</string>
+    <string name="config_default_tls_profile" translatable="false">chrome</string>
+    <string name="config_import_json">从 JSON 文本导入</string>
+    <string name="config_json_hint">在这里粘贴完整 JSON 配置</string>
+    <string name="config_parse_json">解析并回填</string>
+    <string name="config_cancel">取消</string>
+    <string name="config_save">保存配置</string>
+    <string name="config_saved">Trojan 配置已加密保存</string>
+    <string name="config_imported_review">JSON 已载入，请检查后保存</string>
+    <string name="config_imported_needs_ip">JSON 已载入；请解析或手动填写服务器 IPv4 后保存</string>
+    <string name="state_off">已关闭</string>
+    <string name="state_requesting">等待 VPN 授权</string>
+    <string name="state_starting">正在接管网络</string>
+    <string name="state_blocking">安全阻断</string>
+    <string name="state_protected">已保护</string>
+    <string name="state_error">启动失败</string>
+    <string name="detail_off">设备按系统网络正常连接</string>
+    <string name="detail_requesting">请确认 Android 的 VPN 连接请求</string>
+    <string name="detail_starting">正在建立全局 VPN 接口</string>
+    <string name="detail_blocking">全部流量已被接管；Trojan 核心接入前保持断网</string>
+    <string name="detail_protected">全部 IPv4 和 DNS 流量通过 Trojan</string>
+    <string name="vpn_permission_denied">未获得 VPN 权限</string>
+    <string name="vpn_establish_failed">无法建立 VPN 接口</string>
+    <string name="notification_channel">VPN 连接状态</string>
+    <string name="notification_title_blocking">OneTrojan 正在安全阻断</string>
+    <string name="notification_text_blocking">流量已接管，Trojan 核心尚未连接</string>
+    <string name="notification_title_protected">OneTrojan 已连接</string>
+    <string name="notification_text_protected">IPv4 与 DNS 已通过 Trojan；IPv6 已阻断</string>
+</resources>

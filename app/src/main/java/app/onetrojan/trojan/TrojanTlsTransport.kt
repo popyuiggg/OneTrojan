@@ -47,7 +47,12 @@ class TrojanTlsTransport(
             }
             val input = DataInputStream(socket.inputStream)
             when (input.readUnsignedByte()) {
-                0 -> return socket
+                0 -> {
+                    // The timeout protects only bridge negotiation. Established TCP streams and
+                    // UDP associations may legitimately remain idle for longer than 30 seconds.
+                    socket.soTimeout = 0
+                    return socket
+                }
                 1 -> {
                     val length = input.readUnsignedShort()
                     val message = ByteArray(length).also(input::readFully)
@@ -117,6 +122,9 @@ class TrojanTlsTransport(
                 write(initialPayload)
                 flush()
             }
+            // The timeout protects only TLS/Trojan negotiation. Callers that need a bounded
+            // operation (for example DNS) apply their own timeout after open() returns.
+            sslSocket.soTimeout = 0
             return sslSocket
         } catch (error: Exception) {
             sslSocket.close()

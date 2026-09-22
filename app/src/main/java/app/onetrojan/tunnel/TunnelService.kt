@@ -62,8 +62,6 @@ class TunnelService : VpnService() {
                 .setMtu(TUN_MTU)
                 .addAddress(TUN_IPV4, 32)
                 .addRoute("0.0.0.0", 0)
-                .addAddress(TUN_IPV6, 128)
-                .addRoute("::", 0)
                 .addDnsServer(VIRTUAL_DNS)
                 // The VPN's own Trojan control sockets must use the physical network.
                 // Package exclusion is more reliable than per-fd protect on some Android 11 ROMs.
@@ -217,7 +215,6 @@ class TunnelService : VpnService() {
         private const val NOTIFICATION_ID = 1001
         private const val TUN_MTU = 1500
         private const val TUN_IPV4 = "10.111.0.1"
-        private const val TUN_IPV6 = "fd00:111::1"
         private const val VIRTUAL_DNS = "10.111.0.2"
     }
 }

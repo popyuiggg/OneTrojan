@@ -11,8 +11,8 @@ android {
         applicationId = "app.onetrojan"
         minSdk = 30
         targetSdk = 37
-        versionCode = 4
-        versionName = "0.4.0-dev"
+        versionCode = 5
+        versionName = "0.4.1-dev"
 
         testInstrumentationRunner = "android.app.Instrumentation"
 

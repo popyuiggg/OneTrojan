@@ -9,8 +9,9 @@ An Android 11+ single-switch, fail-closed Trojan VPN client.
 - Android VPN permission flow.
 - Foreground `VpnService`.
 - Full IPv4 (`0.0.0.0/0`) forwarding.
-- Full IPv6 (`::/0`) capture and deliberate rejection; IPv6 is never sent to
-  the Trojan relay and cannot fall back to the physical network.
+- IPv6 is disabled at the Android VPN address-family boundary and AAAA DNS
+  queries receive an empty answer; IPv6 is never sent to the Trojan relay and
+  cannot fall back to the physical network.
 - Virtual DNS assignment.
 - Fail-closed startup: the TUN forwarding engine is not started until Trojan
   TCP, TCP-DNS, and UDP-DNS probes have all succeeded.

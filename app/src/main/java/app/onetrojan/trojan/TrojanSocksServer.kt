@@ -226,6 +226,7 @@ class TrojanSocksServer(
 
     private fun queryDnsOverTcp(query: ByteArray): ByteArray {
         require(query.size in 12..4096) { "Invalid DNS query length" }
+        DnsMessage.emptyIpv6Answer(query)?.let { return it }
         val framedQuery = ByteArrayOutputStream(query.size + 2).use { bytes ->
             DataOutputStream(bytes).use { output ->
                 output.writeShort(query.size)

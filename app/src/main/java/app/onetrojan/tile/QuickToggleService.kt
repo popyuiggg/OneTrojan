@@ -3,6 +3,7 @@ package app.onetrojan.tile
 import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.Intent
+import android.graphics.drawable.Icon
 import android.net.VpnService
 import android.os.Build
 import android.service.quicksettings.Tile
@@ -76,6 +77,7 @@ class QuickToggleService : TileService() {
 
     private fun updateTile(snapshot: TunnelSnapshot) {
         val tile = qsTile ?: return
+        tile.icon = Icon.createWithResource(this, R.drawable.ic_qs_arrow)
         tile.state = when (snapshot.phase) {
             TunnelPhase.OFF, TunnelPhase.ERROR -> Tile.STATE_INACTIVE
             TunnelPhase.REQUESTING_PERMISSION -> Tile.STATE_UNAVAILABLE

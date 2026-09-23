@@ -2,9 +2,12 @@
 <resources>
     <style name="Theme.OneTrojan" parent="android:style/Theme.Material.NoActionBar">
         <item name="android:fontFamily">sans</item>
-        <item name="android:statusBarColor">#101412</item>
-        <item name="android:navigationBarColor">#101412</item>
-        <item name="android:colorAccent">#75D6C2</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#07111F</item>
+        <item name="android:navigationBarColor">#07111F</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowBackground">#07111F</item>
+        <item name="android:colorAccent">#FF5A2A</item>
         <item name="android:windowActionModeOverlay">true</item>
     </style>
 </resources>

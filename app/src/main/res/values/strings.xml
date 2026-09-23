@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">OneTrojan</string>
     <string name="switch_label">代理开关</string>
+    <string name="switch_on">代理已开启</string>
+    <string name="switch_off">开启代理</string>
     <string name="tile_label">Trojan VPN</string>
     <string name="config_imported">Trojan 配置已安全保存</string>
     <string name="config_missing">请先打开配置页面并保存 Trojan 节点</string>
@@ -9,6 +11,9 @@
     <string name="config_open">配置</string>
     <string name="config_title">Trojan 配置</string>
     <string name="config_local_only">支持手动配置和粘贴 JSON 文本；不会访问 JSON 中的订阅地址。</string>
+    <string name="config_private_badge">仅保存在本机</string>
+    <string name="config_connection_group">服务器与 TLS</string>
+    <string name="config_network_group">代理网络</string>
     <string name="config_host">服务器域名</string>
     <string name="config_server_ip">服务器 IPv4（防止启动阶段 DNS 泄漏）</string>
     <string name="config_resolve_ipv4">解析域名的 IPv4</string>

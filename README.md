@@ -8,13 +8,13 @@
 
 ## 下载
 
-- [下载最新版 APK（v0.4.1-dev）](https://github.com/popyuiggg/OneTrojan/releases/download/v0.4.1-dev/OneTrojan-0.4.1-utls-dev.apk)
+- [下载最新版 APK（v0.4.2-dev）](https://github.com/popyuiggg/OneTrojan/releases/download/v0.4.2-dev/OneTrojan-0.4.2-utls-dev.apk)
 - [查看 Releases](https://github.com/popyuiggg/OneTrojan/releases)
 
 APK 的 SHA-256：
 
 ```text
-3ef92041d719168bbcca082d39ddb6b081ecf0205c8d844736754178f4ed7f60
+c1ac9796a7266a78e2982f33afae42b637aba0ba422469a73b4d92c2477b68ee
 ```
 
 ## 目前支持
@@ -23,6 +23,7 @@ APK 的 SHA-256：
 - ARM64（`arm64-v8a`）。
 - Trojan 协议，TCP 与 UDP 转发。
 - 一个主开关，以及 Android 快速设置磁贴。
+- 主界面和配置界面固定为竖屏。
 - 全局 IPv4 VPN，不提供按应用或按域名分流。
 - 在 Android VPN 地址族边界阻断 IPv6，防止从物理网络绕过。
 - 强制使用 VPN 内的虚拟 DNS；DNS 请求转换为 Trojan 内的 DNS-over-TCP。
